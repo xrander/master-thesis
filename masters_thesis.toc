@@ -9,18 +9,18 @@
 \contentsline {chapter}{\numberline {2}Materials and Methods}{7}{}%
 \contentsline {section}{\numberline {2.1}Study Area}{7}{}%
 \contentsline {section}{\numberline {2.2}Tree Selection}{7}{}%
-\contentsline {section}{\numberline {2.3}Tree Processing}{7}{}%
-\contentsline {subsection}{\numberline {2.3.1}Field Processing}{7}{}%
-\contentsline {subsection}{\numberline {2.3.2}Laboratory Processing}{7}{}%
-\contentsline {section}{\numberline {2.4}Data Processing and Analysis}{7}{}%
-\contentsline {chapter}{\numberline {3}Results}{8}{}%
-\contentsline {section}{\numberline {3.1}Projected Area and Specific Leaf Area}{8}{}%
-\contentsline {section}{\numberline {3.2}Leaf Area}{8}{}%
-\contentsline {section}{\numberline {3.3}Leaf Area Index}{8}{}%
-\contentsline {subsection}{\numberline {3.3.1}Model Comparison}{8}{}%
-\contentsline {subsection}{\numberline {3.3.2}Study Model vs Goude et al., 2019 LAI Model}{8}{}%
-\contentsline {section}{\numberline {3.4}Biomass Model}{8}{}%
-\contentsline {chapter}{\numberline {4}Discussion}{9}{}%
-\contentsline {section}{\numberline {4.1}LA and LAI models}{9}{}%
-\contentsline {section}{\numberline {4.2}Biomass Model}{9}{}%
-\contentsline {chapter}{\numberline {5}Conclusion}{10}{}%
+\contentsline {section}{\numberline {2.3}Tree Processing}{8}{}%
+\contentsline {subsection}{\numberline {2.3.1}Field Processing}{8}{}%
+\contentsline {subsection}{\numberline {2.3.2}Laboratory Processing}{9}{}%
+\contentsline {section}{\numberline {2.4}Data Processing and Analysis}{9}{}%
+\contentsline {chapter}{\numberline {3}Results}{12}{}%
+\contentsline {section}{\numberline {3.1}Projected Area and Specific Leaf Area}{12}{}%
+\contentsline {section}{\numberline {3.2}Leaf Area}{12}{}%
+\contentsline {section}{\numberline {3.3}Leaf Area Index}{12}{}%
+\contentsline {subsection}{\numberline {3.3.1}Model Comparison}{12}{}%
+\contentsline {subsection}{\numberline {3.3.2}Study Model vs Goude et al., 2019 LAI Model}{12}{}%
+\contentsline {section}{\numberline {3.4}Biomass Model}{12}{}%
+\contentsline {chapter}{\numberline {4}Discussion}{13}{}%
+\contentsline {section}{\numberline {4.1}LA and LAI models}{13}{}%
+\contentsline {section}{\numberline {4.2}Biomass Model}{13}{}%
+\contentsline {chapter}{\numberline {5}Conclusion}{14}{}%

@@ -3,9 +3,11 @@
 \graphicspath{ {/home/xrand/Documents/LaTex/} }
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{gensymb}
 
 \title{ {Estimation of Site-Specific Biomass and Leaf Area Index in a Young Scots pine Stand in Southern Sweden}\\ {Swedish University of Agricultural Sciences}\\ }
 \author{Olamide Michael Adu}
+% add image to this part
 \date{2 June 2023}
 
 \setcounter{tocdepth}{4}
@@ -69,12 +71,68 @@ Therefore, this study is relevant given Sweden’s limited availability of site-
 
 \chapter{Materials and Methods}
 \section{Study Area}
+The thesis study was conducted in Hallarp, Ljunby Kommun, Kronoberg County, Sweden. The site is an experimental site of Scots pine managed by the Tönnersjöheden research station. It is part of a series of thinning experiments (trial 2020) established in Tönnersjöheden and Siljansfors. The trials are divided into blocks with different future thinning treatments, which include control, thinning from below, heavy thinning from below, and thinning from above (Silvaboreal - Försök, n.d.). The destructive biomass sampling performed for this study was done during winter 2023, prior to thinning treatments establishment.
 \section{Tree Selection}
+Trees used for this study were chosen before felling, covering a diameter range of 4 cm to 22 cm with a 2 cm interval for each diameter class (e.g., 4 cm – 6 cm, 6 cm – 8 cm, up to 20 cm – 22 cm). Trees with physical deformities or defects, such as large holes or injuries in their stem, were not selected. An on-site visit was conducted to verify the trees’ physical condition and location. If trees had defects, they were replaced with trees in the same diameter class without deformity. Sixteen trees were selected, with two chosen trees per diameter class except for the 4 cm – 6 cm and 20 cm – 22 cm diameter classes, where one tree was selected. This approach was employed to ensure that a representative sample of trees of various sizes was obtained, avoiding overestimation that could occur from selecting too many large trees.
 \section{Tree Processing}
 \subsection{Field Processing}
-\subsection{Laboratory Processing}
-\section{Data Processing and Analysis}
+Selected trees in the site were marked at 1.3m with a ribbon and cross calipered to get their DBH. The trees were felled afterwards using a chainsaw. A measuring tape was passed straightly along the stem to measure the total height. The total height was measured by placing the 1.3m mark of the measuring tape on the ribbon and passed along the tree length. Additionally, the height at which the living crown started and the length of the living crown were recorded. Afterwards, the living crown was divided into three sections to make up three strata. The first stratum is the position where the first living branch was found, and the third is the last section which includes the top/tip of the tree.
 
+Furthermore, four living branches were selected at each stratum; the selection was made across and along the length of each stratum, hereafter called sample branches. Four tree branches were also chosen from the section below stratum 1; this section is referred to as stratum 0. All sample branches were placed in different plastic bags and carefully labelled according to the plot, tree, and stratum numbers, and their fresh weights were measured. The sample branches were later taken to the laboratory for further processing. In total, there were twelve sample branches per tree. After this, the trees were debranched, and their branches were gathered into a plastic bag and labelled according to their stratum number. For strata 1, 2, and 3, the branches collected were separated into living and dead branches, and their fresh weight was measured.
+
+The length of the ten most recent annual shoots was measured using the carpenter ruler. Subsequently, the whole tree length was marked at 2m intervals, giving markings at 1.3m, 2m, 4m, 6m, 8m, etc. The stem was then cross calipered starting from the base of the stem to the 1.3m and 2m markings, and then the subsequent 2m interval markings to get their diameter measurement along the trunk. The bark thickness at each point, starting from the base, was also measured. Sample disks were collected at each marking, placed in a plastic bag, and labelled accordingly. Afterwards, the lengths and fresh weights of each stem part were taken. The stem parts were disposed of in the forest after this. These procedures were repeated for all the selected trees (Fig 1).
+
+The indirect LAI measurements were done with the LICOR-2200 in two (out of four) blocks close to when the biomass sampling was performed. The measuring points were obtained on two diagonals in each plot, similar to Goude et al. (2019)'s methodology. There were about 50 points per plot, and eight plots were measured in total.
+% add image here
+\subsection{Laboratory Processing}
+For the biomass analysis, the sample disks collected from the stems were dried in an oven at 70\degree C for 24 hours. The barks were separated from the disks, and the bark and sample disks were returned to the oven until a constant weight was achieved. After, the weight of the disks and barks was measured on a precision scale to determine the dry weight (Fig. 2). The bark percentage was calculated by subtracting the dry weight of the bark from the dry weight of the entire disk and then dividing the difference by the dry weight of the entire disk. The biomass of each section was calculated by adding up the dry weights of the disks within each section, including the bark.
+
+The sample branches collected from the field were also processed. The samples were first sorted and prepared for further analysis. Afterwards, 20 needles were collected per branch for each stratum. These 20 needles per branch make it 80 needles collected per stratum. These 80 needles per stratum were placed in a plastic bag, labelled, and put into a freezer for LAI measurement later, further referred to as LAI needles. The remaining sample branches were cut up, set in a metallic frame, labelled, and put into the oven for 24 hours. The sample branches were removed after 24 hours, and their needles were separated, placed in a new metallic frame, and labelled. The sample branches without needles and their needles (hereafter referred to as sample needles) were put into the oven for another 24 hours. After 24 hours, the sample needles and branches without needles were taken out, weighed, and recorded (Fig. 3). 
+
+The LAI needles were digitally scanned, and their area was measured using the ImageJ version 1.53t image analysis software. Afterwards, the LAI needles were oven-dried for 24 hours at 70oC, and their dry weight was measured later.
+% add another image here
+\section{Data Processing and Analysis}
+Data entry and pre-processing were conducted using Microsoft Excel version 2302 (build 16130.20218), while the statistical analyses were performed using R version 4.2.3 (Shortstop Beagle) by R-Core-Team (2023). The data was checked for inaccuracies, inconsistencies, and missing values during the pre-processing phase to ensure data quality. Linear models were fitted using the lm package, and the anova package was used to test for differences between strata. 
+
+Normality and homoscedasticity of the measurement data were tested using the Shapiro-Wilk Test (Shapiro \& Wilk, 1965). A p-value greater than 0.05 indicatedthat the  distribution followed normality. The moment package was used to check the skewness of the distribution.
+
+To estimate Leaf Area Index (LAI), a step-by-step procedure is shown in Fig. 4.
+%image here
+The analyses of the biomass content of trees, Specific Leaf Area (SLA), and Leaf Area (LA) were conducted first on needles and then at the individual tree level. 
+
+The projected area (PA) in $cm^2$ was calculated as the sum of the LAI needles area obtained from ImageJ according to their plot, tree, and strata.
+
+The half total surface area ($HTSA$, $cm^2$) was predicted using the regression equation ($R2 = 0.997$) by Goude et al., 2019 (Equation 1), as the volume of the sample needles was not measured during the laboratory work. 
+
+The specific leaf area (SLA), measured in $cm2g-1$, was calculated for each LAI needle by dividing the HTSA ($cm^2$) by the dry weight ($g$) of the needles. 
+
+The total needle dry weight ($g$) of each stratum was measured by getting the ratio of the needles weighed in the lab, and the needles weighed on the field were multiplied by the SLA ($cm^2g^{-1}$) to calculate the half total leaf area ($cm^2$) of each stratum.
+
+This information was then summarized by the plot and tree number to obtain each tree’s half-total leaf area ($m^2$). Linear regression was performed with DBH ($mm$) as the independent variable to estimate the half-total leaf area for all trees on the site.
+
+Further analyses of the LAI were made on a plot level. The resulting information
+was summarized, filtering out dead trees to estimate the leaf area per plot ($m^2$). The
+leaf area per plot ($m^2$) was then divided by the size in $m^2$ of the various plots to
+obtain the LAI ($m^2m^{-2}$).
+%math equation here
+A regression model was created using stand density and basal area ($stemsha^{-1}$) as
+the independent variables in equations 2 and 3. The variables are assumed to have a linear relationship with LAI:\\
+%math equation here
+Where:\\
+$\beta_0$ = intercept\\
+$\beta_1$ = slope\\
+%math equation here
+% Repeat former where statement here
+The LAI ($m^2m^{-2}$) models created were compared to Goude et al., 2019 equations using MAE, MSE, RMSE, while AIC statistical metrics was used to test for the model having the best fit, between the two LAI models developed from this research. 
+
+For biomass estimation, the dry weight of the sample needles and LAI needles were summed up to obtain the total sample branch needles weight ($g$) for each stratum (equation 4). The total sample branch needles weight (g) was then divided by the weight of the living branch for each stratum collected in the field to obtain the dry/fresh weight ratio (equation 5). The ratio was multiplied by the sum of the fresh weight ($g$) of the sample branch and the living branch of the stratum collected in the field to obtain the total weight of the needles for each stratum (equation 6). 
+
+%equation here
+% where statement here
+%another equation here
+% where statment
+
+For the branches (living and dead), a similar procedure was followed. A dry and fresh weight ratio was calculated and multiplied by the sum of the samples and remaining branches. The result was summed up to obtain the total weight of the branches. The estimation of the stem weight followed almost the same procedure. The weight of the stem discs without bark was upscaled to the stem to get the bark weight. All the dry weights, stem without bark, bark, needles, branches without needles, stem discs, and cones were summed up to get the aboveground biomass of a tree. A linear regression equation was created using DBH ($mm$) as the independent variable and total weight ($kg$) as the dependent variable. The equation was applied to the site data, and the biomass of all the trees on the site was calculated. The result was summarized according to the plot to get the total weight ($kg$) in a plot and a regression equation using basal area, stand density ($stems ha^{-1}$) as the independent variables and the total weight per plot as the dependent variable.
 \chapter{Results}
 \section{Projected Area and Specific Leaf Area}
 \section{Leaf Area}

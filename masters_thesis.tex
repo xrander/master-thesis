@@ -1,0 +1,92 @@
+\documentclass[11pt, a4paper]{report}
+\usepackage{graphicx}
+\graphicspath{ {/home/xrand/Documents/LaTex/} }
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\title{ {Estimation of Site-Specific Biomass and Leaf Area Index in a Young Scots pine Stand in Southern Sweden}\\ {Swedish University of Agricultural Sciences}\\ }
+\author{Olamide Michael Adu}
+\date{2 June 2023}
+
+\setcounter{tocdepth}{4}
+\begin{document}
+\maketitle
+\begin{abstract}
+
+Accurate biomass and leaf area index (LAI) estimation are crucial for understanding forest productivity and carbon dynamics. Models are crucial to estimating forest biomass and LAI. This study aimed to estimate site-specific aboveground biomass and LAI in a young Scots pine stand in southern Sweden. Destructive sampling was carried out to obtain data for biomass and LAI. Site-specific models were developed, including an individual tree LA model based on diameter at breast height (DBH), LAI models based on stand density (LAImodel1) and basal area (LAImodel2), stand-level biomass models developed based on stand density and basal area as independent variables, and tree-level biomass models developed based on DBH. Directly measured LAI values were used to validate a generalized LICOR model for indirect LAI estimation, which was compared to the site-specific LAI model developed in this study. Evaluation metrics such as mean absolute error (MAE), mean squared error (MSE), and root mean squared error (RMSE) were used to compare the site-specific and generalized model. Results showed that site-specific LAI models of this study gave reasonable estimates (LAImodel1 have MAE = 0.166, MSE = 0.039, RMSE = 0.198, and LAImodel2 – MAE = 0.011, MSE = 0.000, RMSE = 0.015) compared to the generalized model (MAE = 0.66, MSE = 0.435, RMSE = 0.66). Directly measured LAI and indirectly measured LAI using the generalized LICOR model had a weak correlation (R2 = 0.1339). For stand-level biomass models, stand density showed moderate correlation (R2 = 0.49) to the total stand biomass, and basal area was strong correlation (R2 = 0.75) with the total stand biomass. These findings demonstrate the importance of using site-specific models to reduce prediction errors when estimating biomass and LAI in forest stands.
+
+\textit{Keywords}: Scots pine, Biomass estimation, Leaf area index, Model Validation, Site-specific models
+\end{abstract}
+\tableofcontents
+
+\chapter{Introduction}
+\section{The Concept of Forest Biomass}
+Biomass is a term that has been used across different fields, including agricultural sciences, renewable energy, biological sciences, environmental sciences, and forestry, to
+mean almost the same thing with little alterations. The difference in the meaning across
+these fields may be regarding their origin, end-use, or composition of the organic matter.
+Biomass, in simple terms, refers to the total mass of organic matter produced by living
+organisms (West 2014; Kumar et al. 2021; Page-Dumroese et al. 2022). This organic matter
+can come from different sources, including plants, animals, and microorganisms
+(Roberts et al. 2015; Wasmi \& Salih 2021). In forestry, the biomass of trees is the focus, and it includes all parts of a tree, like the branches, stem, leaves, needles, stumps, roots, and fine roots (Page-Dumroese et al. 2022).
+
+Forest biomass is the most abundant biomass found on land, having about 70 - 90\% of the terrestrial biomass (Houghton 2008). This biomass is essential to the survival of humans and animals alike. For example, in Sweden, forest biomass for timber, pulp, and paper production accounts for 73.5\% of the biomass used within the country (Kumar et al. 2021). The importance of forest biomass is not limited to this. It is used as part of nature-based solutions to achieve the Sustainable Development Goals (SDGs), especially goal 13 – climate  action, which is gaining much attention (Millennium Ecosystem 2005; IPCC 2022). Using the forest as anSDG tool is closely associated with the range of ecosystem services that it  provides to both the people and the planet (Millennium Ecosystem 2005). For example, forest biomass is a source of foreign exchange for countries like Canada, Finland, Brazil, Sweden, The Russian Federation, the United States, and China, to mention a few (Oishimaya 2017). In Sweden, the forest industry exports more than 85\% of its products, making it the fifth largest exporter of pulp, paper, and sawn timber worldwide. They also contribute to Sweden’s  national GDP and provide more than 100,000 jobs (Hallsten \& Heinsoo 2016).
+
+\subsection{Factos Affecting Forest Biomass Production}
+The different services the forest provides make it necessary to maximize the forest and increase its productivity as much as possible. An increased understanding of the requirements and characteristics of tree biology by researchers and forest managers is essential to optimize land use and increase forest productivity. To do so, foresters/forest managers need to understand the requirements and characteristics of tree biology. 
+
+Some conditions are necessary for tree growth. These requirements are optimum sunlight, carbon dioxide (CO2) from the atmosphere, well-aerated soil with optimum temperature, water, and nutrients from the ground (West 2014). The combination of these factors enables the process of photosynthesis possible. Simply put, photosynthesis is the process by which plants  produce food. Its food increases its biomass, i.e., growth (West 2014). Silvicultural practices are another factor that can impact the production of forest biomass. While not applied in the wilderness or primary forest, they are used in close-to-nature or nature-based forest types and are common in forest plantations (Larsen 2012). These practices are in three stages: pre-planting, planting, and post-planting operations. Examples of such silvicultural practices are thinning, precommercial thinning, breeding and genetics, and soil preparation to mention a few. The practices influence the survival, growth, development, quantity, and quality of tree biomass found in any forest plantation for a given period (Larsen 2012).
+
+\subsection{Biomass Estimation}
+Scots pine (\textit{Pinus sylvestris L.}) is an important tree species in Sweden, and its economic importance is well established (Lula et al. 2021). Numerous studies have been conducted to estimate and develop biomass functions for Scots pine in Sweden. Biomass functions should meet some requirements before being used. They should give reliable estimates of the area of concern. They should be based on variables that are easy to estimate and can be reliably collected from inventory data (Repola 2009; Repola \& Ahnlund Ulvcrona 2014). These functions are derived through destructive, non-destructive sampling, or both. 
+
+Biomass estimation studies using destructive sampling often have smaller sample sizes and simpler models (Weiskittel et al. 2011). However, larger sample sizes have been used in some studies, such as those conducted by Repola (2009), Repola and Ahnlund Ulvcrona (2014), and Marklund (1988), with the latter being used mainly in Sweden. Marklund (1988)’s biomass  equations for pine, birch, and spruce used 1286 tree samples spread around 131 sites in Sweden. The primary parameter in biomass estimation at the individual tree level is the diameter (DBH), although height can also be used in addition to DBH. However, using DBH alone assumes that the relationship between DBH and height is fixed, which is not always the case, as species, site conditions, and management history can also affect tree height (Weiskittel et al. 2011). Therefore, using DBH alone should not be considered when estimating regional or national biomass, as it neglects species-specific variability and site effects (Zianis \& Mencuccini 2004).
+
+\section{Leaf Area Index (LAI) and Its Significance in Forest Productivity Measurement}
+The leaf area index (LAI) is a crucial parameter for measuring the productivity of
+forest ecosystems (Binkley \textit{et al.} 2004; Stape \textit{et al.} 2008). It reflects the photosynthetic capacity of a forest canopy by measuring the total leaf surface area per unit of ground surface area in a forest stand (West 2015). The growth rate of forests is proportional to the amount of sunlight their leaves intercept (Stape \textit{et al.} 2008; Binkley \textit{et al.} 2010). The larger the LAI of a stand, the more sunlight it can intercept and utilize for photosynthesis (Almeida \textit{et al.} 2007; Guiterman \textit{et al.} 2012). Although leaves are the chief photosynthetic organ in trees, other parts of
+trees, such as the petioles, green flowers, cones, and stem tissue, are capable of
+photosynthesizing (Pfanz \textit{et al.} 2002). However, the photosynthetic rate by non-
+leaf parts is limited by tree age, especially the stem of trees. This type of
+photosynthesis involving recycling CO2 by recapturing respiratory CO2 before it
+diffuses out of the stem is called corticular photosynthesis. Reabsorption of CO2 by
+tree parts can compensate for 60 – 90\% of potential carbon loss due to respiration
+(Pfanz \textit{et al.} 2002).
+
+\section{Role of LAI in Understanding Ecosystem Processes and Adaptations in Plantations}
+The forest canopy is a critical driver in ecosystem processes and biomass production (Selin 2019). LAI is an essential parameter for understanding the ecophysiological processes of stand canopy (West 2014; West 2015). Stress in trees can be determined by using LAI. During periods of limited water availability and drought, plantations may reduce their water loss by decreasing their LAI as an adaptation strategy. Trees do this by shedding their leaves. Some studies have shown that LAI varies annually and seasonally (Guiterman \textit{et al.} 2012). Thinning can also affect LAI, which leads to an immediate reduction in LAI at the stand level. While trees left in the stand may adjust their photosynthetic capacity over time, the stand may not recover to its original LAI (Guiterman \textit{et al.} 2012). Pruning, on the other hand, has been found to have little effect on LAI since the leaves in the canopy shade themselves. Even with reduced leaf area, plantations can still intercept about 80\% of their sunlight (Alcorn \textit{et al.} 2008; West 2014). Initially, leaves do not function at their maximum capacity, and pruning allows the remaining leaves to increase their photosynthetic capacity when reduced (Quentin \textit{et al.} 2011).
+\section{Forest Resource Management Models in Sweden}
+Models are essential tools for managing forest resources; they are abstractions of reality attempting to conceive some relationships of a system (Weiskittel \textit{et al.} 2011). In Sweden, models have a long history. They are developed to understand and simulate forest development, support decision-making, and evaluate management strategies. There are three types of models, viz, empirical, process-based and hybrid models. Empirical models are based on statistical correlations and are one of Sweden's most used models. The process-based model utilizes ecophysiological processes that influence growth rather than models based on statistical correlations. The hybrid models combine some ecophysiological process data and statistical correlations to predict stand development (Weiskittel \textit{et al.} 2011; Appiah Mensah \textit{et al.} 2020). Empirical models uses data that are easy to obtain compared to Process-based or Hybrid model types. They are easy to apply in practice having a wide range of applications with good predictive capabilities (Weiskittel \textit{et al.} 2011).
+
+Models, data, and analytical methods are integrated together to make software tools or applications that assist forestry professionals in making informed decisions regarding forest management. These software tools or applications are called Decision Support Systems (DSS) (Söderberg \& Lundström 1996). Hugin’s system is an example of a DSS that uses many empirical-based models (Söderberg \& Lundström 1996; Mats 2015). Developed in the 70s, it incorporates numerous models to predict timber production and quality, biomass, costs, and revenue under different scenarios of forest management strategies (Söderberg \& Lundström 1996). The Heureka DSS has replaced Hugin’s system and boasts more capabilities than its predecessor (Elfving 2010; Mats 2015). The Heureka DSS covers a broader aspect of forestry beyond timber management. Its robust infrastructure allows forest analysis, planning, and management from a stand level to a regional level (Wikström \textit{et al.} 2011). Heureka contains different packages used to analyze, plan, visualize, and generate numerous scenarios based on the set rules of a management system. Models in Heureka are, in one way or another, related to tree development and treatments (silvicultural practice) employed. Also, it allows new models to be added, making the system continually evolving (Wikström \textit{et al.} 2011; Mats 2015). Therefore, empirical studies like this one are important for improving such systems.
+\section{Research Objectives and Justification}
+LAI and biomass models have been created using destructive or/and non-destructive sampling methods (Marklund 1988; Goude \textit{et al.} 2019; Appiah Mensah \textit{et al.} 2020; Cohrs \textit{et al.} 2020; Pertille \textit{et al.} 2020; Vafaei \textit{et al.} 2021). These models are usually generalized and are based on broad assumptions resulting in inaccurate predictions for some sites. These inaccurate predictions might be due to the models not considering site-specific characteristics (Weiskittel \textit{et al.} 2011). Site-specific empirical models could help with accurate predictions, especially when there is limited data or when the focus is on a specific aspect of a system or process. The creation of these models is critical for estimating carbon stocks for carbon accounting purposes and assessing forest productivity with minimal error (Weiskittel \textit{et al.} 2011). 
+
+Therefore, this study is relevant given Sweden’s limited availability of site- specific LAI and biomass models. This research will also compare the newly developed LAI models with an existing generalized model by Goude \textit{et al.} (2019), allowing for an evaluation of the accuracy and applicability of site-specific models. Goude \textit{et al.} (2019) developed multiple models for Scots pine and Norway spruce. Goude \textit{et al.} (2019)’s study compared directly and indirectly measured leaf area measurements of both species. The model of Goude \textit{et al.} (2019) uses a sample size that cut across various sites in Sweden from the north region to the south. Models developed by Goude \textit{et al.} (2019) related to this study are indirectly measured LAI using LAI-2200 C, and directly measured LA and LAI using DBH and Basal area as the explanatory variables respectively. While caution should be applied when applying site-specific models to other forests, their creation is essential for more accurate predictions and sustainable forest management. Thus, the objectives of this study are: 
+\begin{enumerate}[i.]
+\item To create site-specific LA and LAI functions and compare the function with Goude \textit{et al.} (2019). 
+\item To develop a site-specific empirical-based biomass function.
+\end{enumerate}
+
+\chapter{Materials and Methods}
+\section{Study Area}
+\section{Tree Selection}
+\section{Tree Processing}
+\subsection{Field Processing}
+\subsection{Laboratory Processing}
+\section{Data Processing and Analysis}
+
+\chapter{Results}
+\section{Projected Area and Specific Leaf Area}
+\section{Leaf Area}
+\section{Leaf Area Index}
+\subsection{Model Comparison}
+\subsection{Study Model vs Goude et al., 2019 LAI Model}
+\section{Biomass Model}
+
+\chapter{Discussion}
+\section{LA and LAI models}
+\section{Biomass Model}
+
+\chapter{Conclusion}
+
+\end{document}
